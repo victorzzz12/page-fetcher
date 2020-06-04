@@ -10,7 +10,7 @@ request(`${userInput[0]}`, (error, response, body) => {
     
     rl.question('Would like to overwrite? Y/N: ', (answer) => {
       if (answer === 'Y' || answer === 'y') {
-        fs.writeFile("./fetcher.xt", body, (error) => {
+        fs.writeFile("./fetcher.txt", body, (error) => {
           if (error) {
             // Handle error
             console.log("Failed to write to file");
